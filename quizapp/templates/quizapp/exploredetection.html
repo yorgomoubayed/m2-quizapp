@@ -1,0 +1,33 @@
+{% include "./navbar.html" %}
+{% include "./pagination.html" %}
+{% load static %}
+{% block content %}
+
+<!doctype html>
+    <html lang="en">
+
+        <body>
+                                <div class="card content title_container">
+                                    <div class="card-body">
+                                        <p class="card-text" align="justify">Add description</p>
+                                        <a href="#" class="btn btbg"><strong>Learn more</strong></a>
+                                    </div>
+                                </div>
+
+                                {% for item in detection_items %}
+                                <div class="card-deck content">
+                                    <div class="card text-justify">
+                                        <img class="card-img-top" src="{% static 'quizapp/images/'%}{{item.image_name}}.jpg" width="300" height="300" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>Component:</strong> {{item.component}}</p>
+                                            <p class="card-text"><strong>Descirption:</strong> {{item.image_description}}</p>
+                                            <p class="card-text"><strong>Doi:</strong> {{item.doi}}</p>
+                                            <p class="card-text"><strong>Cell type:</strong> {{item.cell_type}}</p>
+                                            <p class="card-text"><strong>Organism:</strong> {{item.organism}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+        </body>
+    </html>
+{% endblock %}

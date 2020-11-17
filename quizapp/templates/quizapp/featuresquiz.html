@@ -1,0 +1,79 @@
+{% load static %}
+
+<!doctype html>
+
+    <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Quiz Page</title>
+            <link rel="stylesheet" href="{% static 'quizapp/style.css' %}">
+            <link rel="stylesheet" href="{% static 'quizapp/gamer.css' %}">
+        </head>
+
+
+        <body>
+            <div class="container">
+                <div id="game" class="justify-center flex-column">
+                    <div id="hud">
+                        <div class="hud-item">
+                            <p id="progressText" class="hud-prefix">Question</p>
+                            <div id="progressBar">
+                                <div id="progressBarFull"></div>
+                            </div>
+                        </div>
+
+                        <div class="hud-item">
+                            <p class="hud-prefix">Score</p>
+                            <h2 style="color:black;" class="hud-main-text" id="score">0</h2>
+                        </div>
+                    </div>
+
+                    <p style="text-align:center;font-size:19px;font-weight: bold;" id="question">What is the answer to this question</p>
+
+                    <div class="align-center">
+                        <center>
+                            <div id="x">
+                            <img class="rounded float-left test_img" src="{% static 'quizapp/images/187.jpg' %}" width="160" height="160" alt="Card image cap">
+<!--
+                            <img class="rounded float-right test_img" src="{% static 'quizapp/images/187.jpg' %}" width="160" height="160" alt="Card image cap">
+-->
+
+                                <script>
+                                var img = document.createElement("img");
+
+                                img.src = "{% static 'quizapp/images/explore.png' %}";
+                                var src = document.getElementById("x");
+
+                                src.appendChild(img);
+                                </script>
+                                    </div>
+<!--                            <img class="rounded float-left test_img" id="image1" width="160" height="160" alt="Card image cap">
+                            <img class="rounded float-right test_img" id="image2" width="160" height="160" alt="Card image cap">-->
+                        </center>
+                    </div>
+
+                    <div class="choice-container">
+                        <p style="text-align:center;font-size:15px;font-weight: bold;color: white;" class="choice-text" data-number="1">Choice</p>
+                    </div>
+
+                    <div class="choice-container">
+                        <p style="text-align:center;font-size:15px;font-weight: bold;color: white;" class="choice-text" data-number="2">Choice 2</p>
+                    </div>
+
+                    <div class="choice-container">
+                        <p style="text-align:center;font-size:15px;font-weight: bold;color: white;" class="choice-text" data-number="3">Choice 3</p>
+                    </div>
+
+                    <div class="choice-container">
+                        <p style="text-align:center;font-size:15px;font-weight: bold;color: white;" class="choice-text" data-number="4">Choice 4</p>
+                    </div>
+                </div>
+            </div>
+
+            <script src="{% static 'quizapp/featuresquiz.js' %}"></script>
+            <script type="text/javascript">DJANGO_STATIC_URL = '{{ STATIC_URL }}';</script>
+
+        </body>
+    </html>

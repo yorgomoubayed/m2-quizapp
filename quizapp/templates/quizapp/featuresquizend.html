@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="{% static 'quizapp/style.css' %}">
+            <link rel="stylesheet" href="{% static 'quizapp/main.css' %}">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+        </head>
+
+        <body>
+            <div class="container">
+                <div id="end" class="flex-center flex-column">
+                    <h2 style="color:black;">{{request.user}} scored:</h2>
+                    <h1 style="color:black;" id="finalScore">0</h1>
+                    <form class="end-form-container">
+<!--                        <h2 id="end-text">Enter your name below to save your score!</h2>
+                        <input type="text" name="name" id="username" placeholder="Enter your name">
+                        <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+                    </form>-->
+                    <a href="{% url 'quiz-quizlab' %}" class="btn btn-lg btn-block btbgb">Take another quiz</a>
+                    <a href="{% url 'quiz-featuresquiz' %}" class="btn btn-lg btn-block btbgb">Do it Again</a>
+                    <a href="{% url 'quiz-home' %}" class="btn btn-lg btn-block btbgb">Go Home<i style="color:white;" class="fas fa-home"></i></a>
+                </div>
+            </div>
+            <script src="{% static 'quizapp/featuresquizend.js' %}"></script>
+        </body>
+    </html>

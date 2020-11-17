@@ -1,0 +1,77 @@
+{% include "./navbar.html" %}
+{% load static %}
+{% block content %}
+
+<!--<!doctype html>-->
+<!--    <html lang="en">-->
+
+<!--        <head>-->
+<!--            <meta charset="UTF-8">-->
+<!--            <title>Title</title>-->
+<!--        </head>-->
+
+<!--        <body>-->
+<!--            {% for first_questions in first_questions_items %}-->
+<!--            <p>{{first_questions.question}}</p>-->
+<!--            {% endfor %}-->
+
+<!--            {% for first_answers in first_answers_items %}-->
+<!--            <p>{{first_answers.answer}}</p>-->
+<!--            {% endfor %}-->
+
+<!--            {% for second_questions in second_questions_items %}-->
+<!--            <p>{{second_questions.question}}</p>-->
+<!--            {% endfor %}-->
+
+<!--            {% for second_answers in second_answers_items %}-->
+<!--            <p>{{second_answers.answer}}</p>-->
+<!--            {% endfor %}-->
+
+<!doctype html>
+
+    <html lang="en">
+
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" type="text/css" href="{% static 'quizapp/main.css' %}">
+            </head>
+
+        <body>
+                                <div class="card-deck content">
+                                    <div class="card text-justify">
+                                        <img class="card-img-top" src="{% static 'quizapp/images/organismquiz.png' %}" width="250" height="250" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Identify the type of the organism in the shown images</p>
+                                            <a role="button" class="btn btn-lg btn-block btbgb">Take the quiz</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card text-justify">
+                                        <img class="card-img-top" src="{% static 'quizapp/images/celltypequiz.png' %}" width="250" height="250" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Identify the cellular type shown in the images</p>
+                                            <a role="button" class="btn btn-lg btn-block btbgb">Take the quiz</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-deck content">
+                                    <div class="card text-justify">
+                                        <img class="card-img-top" src="{% static 'quizapp/images/microscopequiz.png' %}" width="250" height="250" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Identify which type of microscopy was used to acquire the images</p>
+                                            <a role="button" href="{% url 'quiz-microscopyquiz' %}"  class="btn btn-lg btn-block btbgb">Take the quiz</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card text-justify">
+                                        <img class="card-img-top" src="{% static 'quizapp/images/featuresquiz.png' %}" width="250" height="250" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Determine the common features between the shown images</p>
+                                            <a role="button" href="{% url 'quiz-featuresquiz' %}" class="btn btn-lg btn-block btbgb">Take the quiz</a>
+                                        </div>
+                                    </div>
+                                </div>
+        </body>
+    </html>
+{% endblock %}

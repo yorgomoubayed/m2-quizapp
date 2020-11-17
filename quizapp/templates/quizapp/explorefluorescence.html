@@ -1,0 +1,43 @@
+{% include "./navbar.html" %}
+{% include "./pagination.html" %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" type="text/css" href="{% static 'quizapp/main.css' %}">
+        </head>
+
+        <body>
+                        <div class="card content title_container">
+                            <div class="card-body">
+                                <p class="card-text" align="justify">A <strong>fluorescence microscope</strong> is an optical microscope that uses
+                                    fluorescence instead of, or in addition to, scattering, reflection, and attenuation or absorption,
+                                    to study the properties of organic or inorganic substances. It refers
+                                    to any microscope that uses fluorescence to generate an image, whether it is a more simple set up like an
+                                    epifluorescence microscope or a more complicated design such as a confocal microscope ions.</p>
+                                <a href="https://en.wikipedia.org/wiki/Fluorescence_microscope#:~:text=A%20fluorescence%20microscope%20is%20an,of%20organic%20or%20inorganic%20substances." class="btn btbg"><strong>Learn more</strong></a>
+                            </div>
+                        </div>
+
+                        {% for item in fluorescence_items %}
+                                <div class="card-deck content">
+                                    <div class="card text-justify">
+                                        <img class="card-img-top" src="{% static 'quizapp/images/'%}{{item.image_name}}.jpg" width="300" height="300" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text"><strong>Component:</strong> {{item.component}}</p>
+                                            <p class="card-text"><strong>Descirption:</strong> {{ item.image_description }}</p>
+                                            <p class="card-text">{{ item.doi }}</p>
+                                            <p class="card-text"><strong>Cell type:</strong> {{ item.cell_type }}</p>
+                                            <p class="card-text"><strong>Organism:</strong> {{ item.organism }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        {% endfor %}
+        </body>
+    </html>
+{% endblock %}
+

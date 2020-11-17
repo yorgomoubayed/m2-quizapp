@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+
+    <html lang="en">
+
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" type="text/css" href="{% static 'quizapp/main.css' %}">
+        </head>
+
+        <body>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center pagination_container">
+                <li class="page-item">
+                  <a class="page-link btbgr" href="{% url 'quiz-explorefluorescence' %}" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+
+                  <li class="page-item"><a class="page-link btbgb" href="{% url 'quiz-explorefluorescence' %}">1</a></li>
+                  <li class="page-item"><a class="page-link btbgr" href="{% url 'quiz-exploreillumination' %}">2</a></li>
+                  <li class="page-item"><a class="page-link btbgb" href="{% url 'quiz-explorephase' %}">3</a></li>
+                  <li class="page-item"><a class="page-link btbgr" href="{% url 'quiz-exploretem' %}">4</a></li>
+                  <li class="page-item"><a class="page-link btbgb" href="{% url 'quiz-exploresem' %}">5</a></li>
+                  <li class="page-item"><a class="page-link btbgr" href="{% url 'quiz-exploredetection' %}">6</a></li>
+
+                  <li class="page-item">
+                  <a class="page-link btbgb" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+
+            {% block content %}
+            {% endblock %}
+        </body>
+    </html>

@@ -1,0 +1,52 @@
+{% extends "./navbar.html" %}
+{% load static %}
+{% block content %}
+
+<!doctype html>
+    <html>
+
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" type="text/css" href="{% static 'quizapp/main.css' %}">
+            </head>
+
+                <body>
+
+                    <div class="card content title_container">
+                        <div class="card-header title_container_header">
+                            Meet <b>Image Biolab</b>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Are you a fan of biology and microscopy? This is the place for you. <b>Image Biolab</b> is an accessible resource database of images of cells, capturing a wide diversity of organisms, cell types, and cellular processes. Explore the galleries or test your knowledge now!</p>
+                        </div>
+                    </div>
+
+                    <div class="card-deck content">
+
+                        <div class="card text-center">
+                            <img class="card-img-top" src="{% static 'quizapp/images/explore.png' %}" width="50" height="150" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Explore the beauty of living systems through unique images</p>
+                                <a href="{% url 'quiz-explorefluorescence' %}" class="btn btbg"><b>Explore</b></a>
+                            </div>
+                        </div>
+
+                        <div class="card text-center">
+                            <img class="card-img-top embed-responsive embed-responsive-16by9" src="{% static 'quizapp/images/knowledge.png' %}" width="150" height="150" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Test your knowledge on microscopy and cellular biology</p><br>
+                                <a href="{% url 'quiz-quizlab' %}" class="btn btbg"><b>Quiz Lab</b></a>
+                            </div>
+                        </div>
+
+                        <div class="card text-center">
+                            <img class="card-img-top embed-responsive embed-responsive-16by9" src="{% static 'quizapp/images/cil_data.png' %}" width="150" height="150" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">More than 100 images recovered from the cell image library</p>
+                                <a href="http://www.cellimagelibrary.org/home" class="btn btbg"><b>CIL website</b></a>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+    </html>
+    {% endblock %}
