@@ -11,7 +11,7 @@ conda env create --file=environment.yml
 
 Check the requirements.txt file for any missing packages and install them if needed.
 
-### 1.2. Launching the application on a local server
+### 1.2. Running the application on a local server
 To **launch** the application run the following on a Linux distribution terminal:
 ~~~~
 python manage.py runserver
