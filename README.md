@@ -12,6 +12,13 @@ Image Biolab is a Django application with the following features:
 
 # Installing and running the application
 
+## 1. Installing and running the application on a local server
+
+Run the following to clone the repository
+~~~~
+conda env create --file=environment.yml
+~~~~
+
 ## 1. Installing the conda environment
 To **install** the conda package and dependencies run the following on a Linux distribution terminal:
 ~~~~
