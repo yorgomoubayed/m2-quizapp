@@ -14,26 +14,23 @@ Image Biolab is a Django application with the following features:
 
 ## 1. Installing and running the application on a local server
 
-Run the following to clone the repository
+* Run the following to clone the repository
 ~~~~
-conda env create --file=environment.yml
-~~~~
-
-## 1. Installing the conda environment
-To **install** the conda package and dependencies run the following on a Linux distribution terminal:
-~~~~
-conda env create --file=environment.yml
+git clone https://github.com/yorgomoubayed/quizapp.git
 ~~~~
 
+* Run the following on a Linux distribution terminal (recommended) to install the conda package and dependencies: 
+~~~~
+conda env create --file djangoenv.yml
+~~~~
 Check the requirements.txt file for any missing packages and install them if needed.
 
-## 2. Running the application on a local server
-To **launch** the application run the following on a Linux distribution terminal:
+* Run the following on a Linux distribution terminal (recommended) to launch the application: 
 ~~~~
 python manage.py runserver
 ~~~~
 
-Copy the following link **http://127.0.0.1:8000/quizapp/** into your navigator (Chrome is recommended). You should have access to the Image Biolab website home page.
+* Copy the following link **http://127.0.0.1:8000/quizapp/** into your navigator (Chrome is recommended). You should have access to the **Image Biolab** website home page.
 
 ## 3. Running the application on a remote server
 The application was **deployed using Heroku**, a container-based cloud Platform as a Service (PaaS).
