@@ -21,4 +21,4 @@ Copy the following link **http://127.0.0.1:8000/quizapp/** into your navigator (
 
 ### 1.3. Running the application on a remote server
 The application was deployed using Heroku, a container-based cloud Platform as a Service (PaaS).
-Follow this link for access
+Follow this link for access https://imagebiolab.herokuapp.com/quizapp/
