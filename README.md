@@ -20,9 +20,12 @@ Image Biolab is a Django application with the following features:
 git clone https://github.com/yorgomoubayed/quizapp.git
 ~~~~
 
-* Run the following to install the conda package and dependencies: 
+* Run one of the following to install the requirements and dependencies: 
 ~~~~
 conda env create --file djangoenv.yml
+~~~~
+~~~~
+pip install -r requirements.txt
 ~~~~
 Check the requirements.txt file for any missing packages and install them if needed.
 
