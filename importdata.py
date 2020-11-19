@@ -1,3 +1,6 @@
+'''
+A draft python script for importing csv data related to the django application. It hasn't been tested properly.
+'''
 from example.models import Database
 import csv
 
